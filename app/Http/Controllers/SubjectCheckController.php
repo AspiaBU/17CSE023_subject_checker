@@ -58,20 +58,20 @@ class SubjectCheckController extends Controller
             $math->check($request);
         }catch (\Exception $exception){
             return response()->json([
-                'success' => false,
+                
                 'message' => 'An error occured \n'.$exception
             ], 200);
         }
         if(is_null($request['subjects'])){
             return response()->json([
-                'success' => false,
+                
                 'message' => "Eligible for no subject, Sorry. Better luck next time!",
             ], 200);
         }
 
 
         return response()->json([
-            'success' => true,
+            
             'message' => "Eligible Subjects for 'A' unit of University of Barishal.",
             'subjects' => $request['subjects'],
 
