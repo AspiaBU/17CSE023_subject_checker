@@ -9,7 +9,6 @@ class SES extends SubjectChecker
     public function check($request=null)
     {
         if( $request->chemistry_score >= 6){
-            info('got Soil & Environmental Sciences!');
             if(!empty($request['subjects']))
                 $request->merge(['subjects'=> array_merge($request['subjects'],["Soil & Environmental Sciences"])]);
             else
