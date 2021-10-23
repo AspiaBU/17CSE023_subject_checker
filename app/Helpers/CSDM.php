@@ -9,7 +9,7 @@ class CSDM extends SubjectChecker
     public function check($request=null)
     {
         if( $request->physics_score >= 6 || $request->math_score >= 6){
-            info('got Coastal Studies and Disaster Management!');
+           
             if(!empty($request['subjects']))
                 $request->merge(['subjects'=> array_merge($request['subjects'],["Coastal Studies and Disaster Management"])]);
             else

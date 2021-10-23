@@ -9,7 +9,7 @@ class GM extends SubjectChecker
     public function check($request=null)
     {
         if( $request->physics_score >= 6){
-            info('got Geology And Mining!');
+            
             if(!empty($request['subjects']))
                 $request->merge(['subjects'=> array_merge($request['subjects'],["Geology And Mining"])]);
             else

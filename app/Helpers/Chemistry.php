@@ -9,7 +9,7 @@ class Chemistry extends SubjectChecker
     public function check($request=null)
     {
         if( $request->chemistry_score >= 6){
-            info('got Chemistry!');
+            
             if(!empty($request['subjects']))
                 $request->merge(['subjects'=> array_merge($request['subjects'],["Chemistry"])]);
             else

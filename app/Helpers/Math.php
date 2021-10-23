@@ -10,7 +10,7 @@ class Math extends SubjectChecker
     public function check($request=null)
     {
         if($request->hsc_math && $request->math_score >= 6){
-            info('got math!');
+           
 
             if(!empty($request['subjects']))
                 $request->merge(['subjects'=> array_merge($request['subjects'],["Math"])]);
